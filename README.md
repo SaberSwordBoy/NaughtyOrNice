@@ -27,6 +27,12 @@ There's two code files, one for the Arduino and one for the Raspi 0w. The Raspi'
 
 The arduino's code does the actual naughty-or-nice deciding, and sends signals to the raspi via USB Serial. These signals are just strings, for better readability, but they could be anything, such as a single character or integers.
 
+# Sound Effects
+
+There's a lot of sounds in this project, most of them are the voice files that it plays to tell you if you are naughty or nice. These are in the voices folder, and we made using a website called acapela box. It's got some really cool text to speech, like the one for this, and even one that sounds like yoda! https://acapela-box.com/AcaBox/index.php
+
+The rest of the sound effects were downloaded off of http://productioncrate.com, and played in a certain order when the raspi recieves the "buildup" command from the arduino
+
 # Wiring 
 ![Picture of the arduino circuit](https://cdn.discordapp.com/attachments/892498440095928351/918544376567853106/arduino_circuit.png)
 Basically, what we have here is a few LEDs wired up to the arduino with a push button for triggering the whole naughty-nice sequence.
