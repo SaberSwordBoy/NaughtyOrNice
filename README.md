@@ -29,7 +29,7 @@ The arduino's code does the actual naughty-or-nice deciding, and sends signals t
 
 # Sound Effects
 
-There's a lot of sounds in this project, most of them are the voice files that it plays to tell you if you are naughty or nice. These are in the voices folder, and we made using a website called acapela box. It's got some really cool text to speech, like the one for this, and even one that sounds like yoda! https://acapela-box.com/AcaBox/index.php
+There's a lot of sounds in this project, most of them are the voice files that it plays to tell you if you are naughty or nice. These are in the voices folder, and were made using a website called acapela box. It's got some really cool text to speech, like the one for this, and even one that sounds like yoda! https://acapela-box.com/AcaBox/index.php
 
 The rest of the sound effects were downloaded off of http://productioncrate.com, and played in a certain order when the raspi recieves the "buildup" command from the arduino
 
