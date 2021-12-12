@@ -14,7 +14,9 @@ Oh yeah, and theres a camera.
 (I apologize for the bad picture quality, i had to use my phone)
 
 Here's the main box:
+
 ![Box](https://cdn.discordapp.com/attachments/892498440095928351/918554794132668457/IMG_2001.jpg)
+<!-- if you're seeing this, dont worrry about why im using discord to store image files its none of ur buisiness (i cant spell) -->
 
 Inside the box (no bluetooth speaker so you can see):
 ![Contents of the box](https://cdn.discordapp.com/attachments/892498440095928351/918554793646116945/IMG_2002.jpg)
