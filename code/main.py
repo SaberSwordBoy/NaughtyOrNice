@@ -1,3 +1,4 @@
+print("[!] Importing Modules")
 import pygame
 import random
 import time
@@ -30,6 +31,7 @@ camerazoom = pygame.mixer.Sound("soundscrate-camera-zoom-2.wav")
 slotmachine = pygame.mixer.Sound("soundscrate-casino-slot-machine-2.wav")
 powerup2 = pygame.mixer.Sound("soundscrate-scifi-weapon-power-up-mid-2.wav")
 musicbox = pygame.mixer.Sound("soundscrate-christmas-music-box-1.wav")
+
 print("[!] Sound files loaded")
 
 def powerUpSequence():
@@ -43,6 +45,7 @@ def powerUpSequence():
     time.sleep(slotmachine.get_length())
 
 def takePicture():
+    print("[!] Taking Picture")
     files = []
     for r, d, f in os.walk("./images", topdown=True):
         for file in f:
@@ -60,20 +63,18 @@ def main():
     button_pressed = False
     while running:
         serial_in = serial.readline()
-        print(f"[SERIAL]: {serial_in}")
+        if not "0" in serial_in:
+            print(f"[SERIAL]: {serial_in}")
         if b"naughty" in serial_in:
-            print("saying naughty text")
+            print("[AUDIO] Playing Nice Voice")
             random.choice(naughtySounds).play()
         if b"nice" in serial_in:
-            print("saying nice text")
+            print("[AUDIO] Playing Naughty Voice")
             random.choice(niceSounds).play()
         if b"buildup" in serial_in:
-            print("playing buildup sfx")
+            print("[AUDIO] Playing Buildup Sequence")
             thread = threading.Thread(target=takePicture)
             thread.start()
             powerUpSequence()
-        if b"pressed" in serial_in:
-            sayText(random.choice(calculating))
             
-print("[!] Starting Raspi Code....")
 main()
