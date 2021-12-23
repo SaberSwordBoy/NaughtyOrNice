@@ -9,6 +9,7 @@ import threading
 import string
 pygame.init()
 
+print("[!] Initiating Serial Connection with Arduino")
 serial = serial.Serial("/dev/ttyACM0", 9600, timeout=0.1)
 
 print("[!] Loading Sound files")
@@ -76,5 +77,5 @@ def main():
             thread = threading.Thread(target=takePicture)
             thread.start()
             powerUpSequence()
-            
+print("[!] Starting Loop")
 main()
